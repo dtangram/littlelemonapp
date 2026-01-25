@@ -1,8 +1,10 @@
-import Logo from "../assets/svgs/logo";
+import Logo from "../../assets/svgs/logo";
+// import clsx from 'clsx';
+import styles from '../../global styles/globalStyles.css';
 const Nav = () => {
   return (
     <nav>
-      <div className="nav-container">
+      <div className={styles.navContainer}>
         <div className="logo">
           <Logo />
         </div>

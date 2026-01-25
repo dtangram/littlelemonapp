@@ -1,16 +1,10 @@
-import Nav from './components/Nav';
-// import Header from './components/Header';
-// import Main from './components/Main';
-// import Footer from './components/Footer';
+import Main from './components/Main/Main';
 import './App.css';
 
 const App = () => {
   return (
     <>
-      <Nav />
-      {/* <Header />
       <Main />
-      <Footer /> */}
     </>
   );
 }
