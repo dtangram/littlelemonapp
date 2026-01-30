@@ -1,0 +1,95 @@
+.highlightsSectionCards, .highlightsCardHeader, .highlightsContent, .highlightsCardOrder {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.highlightsSectionCards, .highlightsCardHeader, .highlightsContent {
+    justify-content: space-between;
+}
+
+.highlightsCard > figure, .highlightsCard {
+    overflow: hidden;
+}
+
+.highlightsCard > figure, .highlightsCard > figure img, .highlightsCardOrderIcon img {
+    width: 100%;
+}
+
+.highlightsCardContent p, .highlightsCardContent button {
+    font-size: 16pt;
+}
+
+.highlightsSectionCards{
+    gap: 0;
+}
+
+.highlightsSection {
+    height: 652px;
+    padding-top: 10px;
+}
+
+.highlightsCardHeader {
+    align-items: center;
+}
+
+.highlightsContent {
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.highlightsSection h1, .highlightsCardContent p {
+    color: #495E57;
+}
+
+.highlightsSection h2 {
+    color: #000;
+    font-size: 20pt;
+    font-weight: normal;
+}
+
+.highlightsCard {
+    height: 515px;
+    width: 32%;
+}
+
+.highlightsCard > figure {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 214px;
+}
+
+.highlightsCardHeader span {
+    color: #EE9972;
+    font-family: Markazi Text, serif;
+    font-size: 20pt;
+    font-weight: normal;
+    margin: 0;
+}
+
+.highlightsCardContent {
+    background-color: #EDEFEE;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: inherit;
+    padding: 16px;
+}
+
+.highlightsCardContent button {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    height: auto;
+    text-align: left;
+    width: auto;
+}
+
+.highlightsCardOrder {
+    align-items: center;
+    gap: 8px;
+}
+
+.highlightsCardOrderIcon {
+    width: 30px;
+}

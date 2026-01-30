@@ -1,0 +1,58 @@
+.headerSection, .headerWrapper {
+    display: flex;
+}
+
+h1, h2 {
+    font-family: 'Markazi Text', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.headerContainer {
+    height: 510px;
+    position: relative;
+}
+
+.headerSection {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.headerWrapper {
+    flex-direction: column;
+    gap: 16px;
+}
+
+.headerWrapper p {
+    color: #FFF;
+    font-size: 18pt;
+    font-weight: 500;
+    width: 440px
+
+}
+
+.headerImage {
+    border-radius: 16px;
+    margin: 20px 0 0;
+    height: 445px;
+    overflow: hidden;
+    width: 445px;
+}
+
+.headerImage img {
+    margin-top: -121px;
+    width: 100%;
+}
+
+.headerBck {
+    background-color: #495E57;
+    height: 400px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
