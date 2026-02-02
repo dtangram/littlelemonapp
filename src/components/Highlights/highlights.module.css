@@ -1,6 +1,4 @@
 .highlightsSectionCards, .highlightsCardHeader, .highlightsContent, .highlightsCardOrder {
-    display: flex;
-    flex-direction: row;
     gap: 8px;
 }
 
@@ -16,17 +14,25 @@
     width: 100%;
 }
 
-.highlightsCardContent p, .highlightsCardContent button {
+.highlightsCardContent button {
     font-size: 16pt;
+}
+
+.borderRadiusTop {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
 }
 
 .highlightsSectionCards{
     gap: 0;
 }
 
+.highlightsSection h1 {
+    color: #495E57;
+}
+
 .highlightsSection {
-    height: 652px;
-    padding-top: 10px;
+    padding-top: 60px;
 }
 
 .highlightsCardHeader {
@@ -36,10 +42,6 @@
 .highlightsContent {
     align-items: baseline;
     margin-bottom: 20px;
-}
-
-.highlightsSection h1, .highlightsCardContent p {
-    color: #495E57;
 }
 
 .highlightsSection h2 {
@@ -53,9 +55,7 @@
     width: 32%;
 }
 
-.highlightsCard > figure {
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+.highlightsCard .highlightsCardImage {
     height: 214px;
 }
 
@@ -69,11 +69,13 @@
 
 .highlightsCardContent {
     background-color: #EDEFEE;
-    display: flex;
-    flex-direction: column;
     gap: 25px;
     height: inherit;
     padding: 16px;
+}
+
+.highlightsCardContent p {
+    height: 160px;
 }
 
 .highlightsCardContent button {

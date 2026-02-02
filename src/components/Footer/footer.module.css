@@ -1,0 +1,28 @@
+.sectionList li, .sectionList li a {
+    color: #495E57;
+    font-size: 16pt;
+}
+
+.footerContainer {
+    background-color: #EDEFEE;
+    justify-content: space-between;
+}
+
+.footerWrapper {
+    gap: 85px;
+}
+
+.sectionHeading {
+    margin-bottom: 30px;
+}
+
+.sectionList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sectionList li {
+    font-family: Karla, sans-serif;
+    font-weight: bold;
+}

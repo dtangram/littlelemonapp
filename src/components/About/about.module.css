@@ -1,0 +1,49 @@
+.aboutSection {
+    justify-content: space-between;
+}
+.aboutSection h2 {
+    color: #495E57;
+    margin-bottom: 20px;
+}
+
+.aboutContent {
+    width: 520px
+}
+.aboutContent h2 {
+    color: #495E57;
+}
+
+.aboutImageWrapper {
+    position: relative;
+    width: 500px;
+}
+
+.aboutImage {
+    height: 376px;
+    overflow: hidden;
+    width: 258px;
+}
+
+.aboutImage:nth-child(1) {
+    margin-top: 50px;
+}
+
+.aboutImage:nth-child(2) {
+    margin-left: 207px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.aboutImage:nth-child(1) img {
+    margin-left: -93px;
+    transform: scaleX(-1);
+    width: 581px;
+}
+
+.aboutImage:nth-child(2) img {
+    margin-left: -297px;
+    margin-top: -36px;
+    width: 638px;
+}
+

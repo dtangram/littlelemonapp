@@ -14,7 +14,7 @@ const Header = () => {
                     </p>
                     <button className={styles.reservationButton}>Reserve a Table</button>
                 </article>
-                <figure className={styles.headerImage}>
+                <figure className={clsx("borderRadius", styles.headerImage)}>
                     <img src={restaurantfood} alt="Delicious Mediterranean Dish" />
                 </figure>
             </section>

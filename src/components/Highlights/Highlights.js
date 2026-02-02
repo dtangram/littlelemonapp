@@ -8,24 +8,24 @@ import styles from './highlights.module.css';
 const Highlights = () => {
     return (
         <section className={clsx("container", styles.highlightsSection)}>
-            <section className={styles.highlightsContent}>
+            <section className={clsx("flexRow", styles.highlightsContent)}>
                 <h1>This week’s specials!</h1>
                 <button className={styles.reservationButton}>Online Menu</button>
             </section>
-            <section className={styles.highlightsSectionCards}>
+            <section className={clsx("flexRow", styles.highlightsSectionCards)}>
                 <article className={styles.highlightsCard}>
-                    <figure className={styles.highlightsCardImage}>
+                    <figure className={clsx(styles.borderRadiusTop, styles.highlightsCardImage)}>
                         <img src={greekSalad} alt="Greek Salad" />
                     </figure>
-                    <section className={styles.highlightsCardContent}>
-                        <section className={styles.highlightsCardHeader}>
+                    <section className={clsx("flexColumn", styles.highlightsCardContent)}>
+                        <section className={clsx("flexRow", styles.highlightsCardHeader)}>
                             <h2>Greek Salad</h2>
                             <span>$12.99</span>
                         </section>
                         <p>
                             The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.
                         </p>
-                        <section className={styles.highlightsCardOrder}>
+                        <section className={clsx("flexRow", styles.highlightsCardOrder)}>
                             <button className={styles.highlightsCardOrderButton}>Order a delivery</button>
                             <figure className={styles.highlightsCardOrderIcon}>
                                 <img src={scooter} alt="Order delivery" />
@@ -34,18 +34,18 @@ const Highlights = () => {
                     </section>
                 </article>
                 <article className={styles.highlightsCard}>
-                    <figure className={styles.highlightsCardImage}>
+                    <figure className={clsx(styles.borderRadiusTop, styles.highlightsCardImage)}>
                         <img src={bruschetta} alt="Bruschetta" />
                     </figure>
-                    <section className={styles.highlightsCardContent}>
-                        <section className={styles.highlightsCardHeader}>
+                    <section className={clsx("flexColumn", styles.highlightsCardContent)}>
+                        <section className={clsx("flexRow", styles.highlightsCardHeader)}>
                             <h2>Bruschetta</h2>
                             <span>$5.99</span>
                         </section>
                         <p>
                             Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.
                         </p>
-                        <section className={styles.highlightsCardOrder}>
+                        <section className={clsx("flexRow", styles.highlightsCardOrder)}>
                             <button className={styles.highlightsCardOrderButton}>Order a delivery</button>
                             <figure className={styles.highlightsCardOrderIcon}>
                                 <img src={scooter} alt="Order delivery" />
@@ -54,18 +54,18 @@ const Highlights = () => {
                     </section>
                 </article>
                 <article className={styles.highlightsCard}>
-                    <figure className={styles.highlightsCardImage}>
+                    <figure className={clsx("flexRow", styles.borderRadiusTop, styles.highlightsCardImage)}>
                         <img src={lemonDessert} alt="Lemon Dessert" />
                     </figure>
-                    <section className={styles.highlightsCardContent}>
-                        <section className={styles.highlightsCardHeader}>
+                    <section className={clsx("flexColumn", styles.highlightsCardContent)}>
+                        <section className={clsx("flexRow", styles.highlightsCardHeader)}>
                             <h2>Lemon Dessert</h2>
                             <span>$5.00</span>
                         </section>
                         <p>
                             This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.
                         </p>
-                        <section className={styles.highlightsCardOrder}>
+                        <section className={clsx("flexRow", styles.highlightsCardOrder)}>
                             <button className={styles.highlightsCardOrderButton}>Order a delivery</button>
                             <figure className={styles.highlightsCardOrderIcon}>
                                 <img src={scooter} alt="Order delivery" />
