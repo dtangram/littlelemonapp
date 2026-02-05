@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header id="header" className={clsx("container", styles.headerContainer)}>
             <section className={styles.headerSection}>
-                <article className={styles.headerWrapper}>
+                <article className={clsx("flexColumn", styles.headerWrapper)}>
                     <h1>Little Lemon</h1>
                     <h2>Chicago</h2>
                     <p>
@@ -14,8 +14,8 @@ const Header = () => {
                     </p>
                     <button className={styles.reservationButton}>Reserve a Table</button>
                 </article>
-                <figure className={clsx("borderRadius", styles.headerImage)}>
-                    <img src={restaurantfood} alt="Delicious Mediterranean Dish" />
+                <figure className={styles.headerImage}>
+                    <img className="borderRadius" src={restaurantfood} alt="Delicious Mediterranean Dish" />
                 </figure>
             </section>
             <figure className={styles.headerBck}></figure>

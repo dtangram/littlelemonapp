@@ -25,13 +25,13 @@ h1, h2, h4 {
 
 h1 {
     color:#F4CE14;
-    font-size: 64pt;
+    font-size: clamp(34pt, 5vw, 64pt);
     font-weight: 500;
 }
 
 h2 {
     color: #FFF;
-    font-size: 40pt;
+    font-size: clamp(24pt, 5vw, 40pt);
     font-weight: normal;
 }
 
@@ -47,12 +47,12 @@ figure {
 }
 
 p, button {
-    font-family: karla, sans-serif;
+    font-family: Karla, sans-serif;
 }
 
 p {
     color: #495E57;
-    font-size: 16pt;
+    font-size: clamp(14pt, 1.5vw, 18pt);
     font-weight: normal;
     line-height: 1.5;
     margin: 0;
@@ -65,7 +65,7 @@ button {
     border-radius: 16px;
     color: #000;
     cursor: pointer;
-    font-size: 18pt;
+    font-size: clamp(14pt, 1.5vw, 18pt);
     font-weight: bold;
     height: 40px;
     width: 200px;
