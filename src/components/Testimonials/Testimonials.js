@@ -22,7 +22,7 @@ const Testimonials = () => {
                         <figure className={styles.profile}>
                             <img src={adam} alt="Adam Profile" />
                         </figure>
-                        <h3>-Adam A.</h3>
+                        <p>-Adam A.</p>
                     </section>
                     <p>
                         "The food at Little Lemon is absolutely amazing! The flavors are authentic and the presentation is beautiful. Highly recommend!"
@@ -39,7 +39,7 @@ const Testimonials = () => {
                         <figure className={styles.profile}>
                             <img src={michelle} alt="Michelle T. Profile" />
                         </figure>
-                        <h3>- Michelle T.</h3>
+                        <p>- Michelle T.</p>
                     </section>
                     <p>
                         "I've been coming to Little Lemon for years and it never disappoints. The service is excellent and the food is always fresh."
@@ -56,7 +56,7 @@ const Testimonials = () => {
                         <figure className={styles.profile}>
                             <img src={jason} alt="Jason R. Profile" />
                         </figure>
-                        <h3>- Jason R.</h3>
+                        <p>- Jason R.</p>
                     </section>
                     <p>
                         "Little Lemon has become my go-to spot for Mediterranean cuisine. The staff is friendly and the atmosphere is cozy."
@@ -73,7 +73,7 @@ const Testimonials = () => {
                         <figure className={styles.profile}>
                             <img src={amy} alt="Amy R. Profile" />
                         </figure>
-                        <h3>- Amy R.</h3>
+                        <p>- Amy R.</p>
                     </section>
                     <p>
                         "The ambiance at Little Lemon is perfect for a night out. The food is delicious and the cocktails are creative. A must-visit!"

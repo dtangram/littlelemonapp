@@ -1,4 +1,13 @@
+.testimonialsCards, .testimonialProfile {
+    margin: 0 auto;
+}
+
+.testimonialsCards, .profileWrapper, .testimonialProfile {
+    gap: 16px;
+}
+
 .testimonialsSection {
+    align-items: center;
     background-color: #495E57;
 }
 
@@ -8,19 +17,20 @@
 }
 
 .testimonialsCards {
+    flex-direction: column;
     justify-content: space-between;
-    gap: 16px;
+    width: 50%;
 }
 
 .profileWrapper {
     align-items: center;
-    gap: 16px;
 }
 
 .testimonialProfile {
     background-color: #FBDABB;
-    gap: 16px;
+    justify-content: space-between;
     padding: 10px;
+    width: 100%;
 }
 
 .profile {
@@ -31,4 +41,16 @@
 .profile img {
     border: solid 2px #495E57;
     width: 100%;
+}
+
+@media (min-width: 1475px) {
+    .testimonialsCards {
+        flex-direction: row;
+        justify-content: unset;
+        width:unset;
+    }
+
+    .testimonialProfile {
+        width: auto;
+    }
 }

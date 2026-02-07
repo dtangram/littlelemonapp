@@ -4,12 +4,23 @@
 }
 
 .footerContainer {
+    align-items: center;
     background-color: #EDEFEE;
+    flex-direction: column;
     justify-content: space-between;
 }
 
+.logoFigure {
+    margin-bottom: 60px;
+}
+
 .footerWrapper {
+    flex-direction: column;
     gap: 85px;
+}
+
+.footerSection {
+    text-align: center;
 }
 
 .sectionHeading {
@@ -25,4 +36,26 @@
 .sectionList li {
     font-family: Karla, sans-serif;
     font-weight: bold;
+}
+
+@media (min-width: 1095px) {
+    .footerContainer {
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 60px;
+        justify-content: unset;
+    }
+
+    .logoFigure {
+        margin-bottom: 0;
+    }
+
+    .footerWrapper {
+        flex-direction: row;
+        gap: 85px;
+    }
+
+    .footerSection {
+        text-align: left;
+    }
 }

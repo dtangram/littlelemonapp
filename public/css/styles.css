@@ -1,3 +1,16 @@
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h4 {
+    font-family: 'Markazi Text', serif;
+}
+
+h3, p, button {
+    font-family: Karla, sans-serif;
+}
+
 .container {
     padding: 30px 17%;
 }
@@ -14,15 +27,6 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3, h4 {
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2, h4 {
-    font-family: 'Markazi Text', serif;
-}
-
 h1 {
     color:#F4CE14;
     font-size: clamp(34pt, 5vw, 64pt);
@@ -33,6 +37,12 @@ h2 {
     color: #FFF;
     font-size: clamp(24pt, 5vw, 40pt);
     font-weight: normal;
+}
+
+h3 {
+    color: #000;
+    font-size: clamp(14pt, 3vw, 18pt);
+    font-weight: bold;
 }
 
 h4 {
@@ -46,13 +56,9 @@ figure {
     margin: 0;
 }
 
-p, button {
-    font-family: Karla, sans-serif;
-}
-
 p {
     color: #495E57;
-    font-size: clamp(14pt, 1.5vw, 18pt);
+    font-size: clamp(12pt, 1.5vw, 16pt);
     font-weight: normal;
     line-height: 1.5;
     margin: 0;

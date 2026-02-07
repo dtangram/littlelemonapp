@@ -4,8 +4,8 @@ import styles from './header.module.css';
 
 const Header = () => {
     return (
-        <header id="header" className={clsx("container", styles.headerContainer)}>
-            <section className={styles.headerSection}>
+        <header id="header" className={clsx("container", "flexColumn", styles.headerContainer)}>
+            <section className={clsx("flexColumn", styles.headerSection)}>
                 <article className={clsx("flexColumn", styles.headerWrapper)}>
                     <h1>Little Lemon</h1>
                     <h2>Chicago</h2>

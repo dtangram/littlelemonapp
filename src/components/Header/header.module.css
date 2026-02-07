@@ -1,12 +1,14 @@
 .headerContainer, .headerSection {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
 .headerContainer {
     background-color: #495E57;
     position: relative;
+}
+
+.headerSection {
+    flex-direction: column;
 }
 
 .headerWrapper {

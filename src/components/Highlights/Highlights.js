@@ -15,7 +15,7 @@ const Highlights = () => {
             <section className={clsx("flexRow", styles.highlightsSectionCards)}>
                 <article className={styles.highlightsCard}>
                     <figure className={clsx(styles.borderRadiusTop, styles.highlightsCardImage)}>
-                        <img src={greekSalad} alt="Greek Salad" />
+                        <img className={styles.borderRadiusTop} src={greekSalad} alt="Greek Salad" />
                     </figure>
                     <section className={clsx("flexColumn", styles.highlightsCardContent)}>
                         <section className={clsx("flexRow", styles.highlightsCardHeader)}>
@@ -35,7 +35,7 @@ const Highlights = () => {
                 </article>
                 <article className={styles.highlightsCard}>
                     <figure className={clsx(styles.borderRadiusTop, styles.highlightsCardImage)}>
-                        <img src={bruschetta} alt="Bruschetta" />
+                        <img className={styles.borderRadiusTop} src={bruschetta} alt="Bruschetta" />
                     </figure>
                     <section className={clsx("flexColumn", styles.highlightsCardContent)}>
                         <section className={clsx("flexRow", styles.highlightsCardHeader)}>
@@ -55,7 +55,7 @@ const Highlights = () => {
                 </article>
                 <article className={styles.highlightsCard}>
                     <figure className={clsx("flexRow", styles.borderRadiusTop, styles.highlightsCardImage)}>
-                        <img src={lemonDessert} alt="Lemon Dessert" />
+                        <img className={styles.borderRadiusTop} src={lemonDessert} alt="Lemon Dessert" />
                     </figure>
                     <section className={clsx("flexColumn", styles.highlightsCardContent)}>
                         <section className={clsx("flexRow", styles.highlightsCardHeader)}>
