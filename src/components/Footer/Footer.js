@@ -14,8 +14,8 @@ const Footer = () => {
             </figure>
             <section className={clsx("flexRow", styles.footerWrapper)}>
                 <section className={styles.footerSection}>
-                    <h4 className={styles.sectionHeading}>Doormat Navigation</h4>
-                    <ul className={styles.sectionList}>
+                    <h3 className={styles.sectionHeading}>Doormat Navigation</h3>
+                    <ul className={clsx("flexColumn", styles.sectionList)}>
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
                         <li><a href="/menu">Menu</a></li>
@@ -25,16 +25,16 @@ const Footer = () => {
                     </ul>
                 </section>
                 <section className={styles.footerSection}>
-                    <h4 className={styles.sectionHeading}>Contact</h4>
-                    <ul className={styles.sectionList}>
+                    <h3 className={styles.sectionHeading}>Contact</h3>
+                    <ul className={clsx("flexColumn", styles.sectionList)}>
                         <li>Address: 123 Main St, Chicago, IL</li>
                         <li>Phone: (123) 456-7890</li>
                         <li>Email: info@littlelemon.com</li>
                     </ul>
                 </section>
                 <section className={styles.footerSection}>
-                    <h4 className={styles.sectionHeading}>Social Media Links</h4>
-                    <ul className={styles.sectionList}>
+                    <h3 className={styles.sectionHeading}>Social Media Links</h3>
+                    <ul className={clsx("flexColumn", styles.sectionList)}>
                         <li><a href="https://www.facebook.com">Facebook</a></li>
                         <li><a href="https://www.tiktok.com">TikTok</a></li>
                         <li><a href="https://www.instagram.com">Instagram</a></li>

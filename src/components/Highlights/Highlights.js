@@ -19,7 +19,7 @@ const Highlights = () => {
                     </figure>
                     <section className={clsx("flexColumn", styles.highlightsCardContent)}>
                         <section className={clsx("flexRow", styles.highlightsCardHeader)}>
-                            <h2>Greek Salad</h2>
+                            <h3>Greek Salad</h3>
                             <span>$12.99</span>
                         </section>
                         <p>
@@ -39,7 +39,7 @@ const Highlights = () => {
                     </figure>
                     <section className={clsx("flexColumn", styles.highlightsCardContent)}>
                         <section className={clsx("flexRow", styles.highlightsCardHeader)}>
-                            <h2>Bruschetta</h2>
+                            <h3>Bruschetta</h3>
                             <span>$5.99</span>
                         </section>
                         <p>
@@ -59,7 +59,7 @@ const Highlights = () => {
                     </figure>
                     <section className={clsx("flexColumn", styles.highlightsCardContent)}>
                         <section className={clsx("flexRow", styles.highlightsCardHeader)}>
-                            <h2>Lemon Dessert</h2>
+                            <h3>Lemon&nbsp;Dessert</h3>
                             <span>$5.00</span>
                         </section>
                         <p>

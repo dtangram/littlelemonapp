@@ -5,21 +5,51 @@
 .navSection {
     flex-direction: column;
     gap: clamp(16px, 3vw, 90px);
+    position: relative;
 }
 
 .navLinks {
-    flex-wrap: wrap;
+    background-color: #F4CE14;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
     gap: clamp(8px, 2vw, 40px);
+    margin-top: 10px;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 50%;
+    z-index: 999;
+}
+
+.navLinksOpen {
+    display: flex;
+}
+
+.navLinks li {
+    width: 100%;
+    text-align: center;
+}
+
+.navLinks li:hover {
+    background-color: #495e57;
 }
 
 .navLinks li a {
     color: #000;
+    display: block;
     font-size: clamp(11pt, 1.5vw, 16pt);
+    padding: 12px;
     white-space: nowrap;
 }
 
+.navLinks li:hover a {
+    color: #FFF;
+}
+
 .navContainer figure {
-    margin: 0 auto;
     width: clamp(120px, 20vw, 200px);
 }
 
@@ -28,7 +58,25 @@
     height: auto;
 }
 
-@media (min-width: 1024px) {
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: fit-content;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: fit-content;
+    z-index: 10;
+}
+
+@media (min-width: 1025px) {
+    .hamburger {
+        display: none;
+    }
+
     .navContainer {
         padding-bottom: 10px;
         padding-top: 10px;
@@ -42,11 +90,15 @@
     }
 
     .navLinks {
+        background-color: transparent;
+        box-shadow: none;
         display: flex;
-        flex-wrap: nowrap;
+        flex-direction: row;
+        position: relative;
+        z-index: 0;
     }
 
-    .navContainer figure {
-        margin: 0;
+    .navLinks li a {
+        padding: 0;
     }
 }
