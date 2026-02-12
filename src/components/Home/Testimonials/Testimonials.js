@@ -1,8 +1,8 @@
 import StarRating from '../StarRating/StarRating';
-import adam from '../../assets/adam.jpg';
-import michelle from '../../assets/michelle.jpg';
-import jason from '../../assets/jason.jpg';
-import amy from '../../assets/amy.jpg';
+import adam from '../../../assets/adam.jpg';
+import michelle from '../../../assets/michelle.jpg';
+import jason from '../../../assets/jason.jpg';
+import amy from '../../../assets/amy.jpg';
 import clsx from 'clsx';
 import styles from './testimonials.module.css';
 

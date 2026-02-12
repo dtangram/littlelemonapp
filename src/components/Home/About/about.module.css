@@ -3,10 +3,6 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.aboutSection h2 {
-    color: #495E57;
-    margin-bottom: 20px;
-}
 
 .aboutContent {
     margin-bottom: 20px;
@@ -15,7 +11,16 @@
 }
 
 .aboutContent h2 {
+    color: #F4CE14;
+}
+
+.aboutContent span {
     color: #495E57;
+    display: inline-block;
+    font-family: 'Markazi Text', serif;
+    font-size: clamp(18pt, 5vw, 30pt);
+    font-weight: normal;
+    margin-bottom: 25px;
 }
 
 .aboutContent p {
@@ -66,7 +71,7 @@
     }
 
     .aboutImageWrapper {
-        margin: auto;
+        margin: unset;
         position: relative;
         width: 500px;
     }

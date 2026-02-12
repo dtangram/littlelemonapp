@@ -1,4 +1,4 @@
-import starRating from '../../assets/starRating.png';
+import starRating from '../../../assets/starRating.png';
 import clsx from 'clsx';
 import styles from './starRating.module.css';
 const StarRating = () => {

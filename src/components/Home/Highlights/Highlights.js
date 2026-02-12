@@ -1,7 +1,7 @@
-import greekSalad from '../../assets/greek salad.jpg';
-import bruschetta from '../../assets/bruschetta.jpg';
-import lemonDessert from '../../assets/lemon dessert.jpg';
-import scooter from '../../assets/scooter.png';
+import greekSalad from '../../../assets/greek salad.jpg';
+import bruschetta from '../../../assets/bruschetta.jpg';
+import lemonDessert from '../../../assets/lemon dessert.jpg';
+import deliveryBike from '../../../assets/deliveryBike.png';
 import clsx from 'clsx';
 import styles from './highlights.module.css';
 
@@ -9,11 +9,11 @@ const Highlights = () => {
     return (
         <section className={clsx("container", styles.highlightsSection)}>
             <section className={clsx("flexRow", styles.highlightsContent)}>
-                <h1>This week’s specials!</h1>
+                <h2>This week’s specials!</h2>
                 <button className={styles.reservationButton}>Online Menu</button>
             </section>
             <section className={clsx("flexRow", styles.highlightsSectionCards)}>
-                <article className={styles.highlightsCard}>
+                <article className={clsx(styles.borderRadiusTop, styles.highlightsCard)}>
                     <figure className={clsx(styles.borderRadiusTop, styles.highlightsCardImage)}>
                         <img className={styles.borderRadiusTop} src={greekSalad} alt="Greek Salad" />
                     </figure>
@@ -28,12 +28,12 @@ const Highlights = () => {
                         <section className={clsx("flexRow", styles.highlightsCardOrder)}>
                             <button className={styles.highlightsCardOrderButton}>Order a delivery</button>
                             <figure className={styles.highlightsCardOrderIcon}>
-                                <img src={scooter} alt="Order delivery" />
+                                <img src={deliveryBike} alt="Order delivery" />
                             </figure>
                         </section>
                     </section>
                 </article>
-                <article className={styles.highlightsCard}>
+                <article className={clsx(styles.borderRadiusTop, styles.highlightsCard)}>
                     <figure className={clsx(styles.borderRadiusTop, styles.highlightsCardImage)}>
                         <img className={styles.borderRadiusTop} src={bruschetta} alt="Bruschetta" />
                     </figure>
@@ -48,12 +48,12 @@ const Highlights = () => {
                         <section className={clsx("flexRow", styles.highlightsCardOrder)}>
                             <button className={styles.highlightsCardOrderButton}>Order a delivery</button>
                             <figure className={styles.highlightsCardOrderIcon}>
-                                <img src={scooter} alt="Order delivery" />
+                                <img src={deliveryBike} alt="Order delivery" />
                             </figure>
                         </section>
                     </section>
                 </article>
-                <article className={styles.highlightsCard}>
+                <article className={clsx(styles.borderRadiusTop, styles.highlightsCard)}>
                     <figure className={clsx("flexRow", styles.borderRadiusTop, styles.highlightsCardImage)}>
                         <img className={styles.borderRadiusTop} src={lemonDessert} alt="Lemon Dessert" />
                     </figure>
@@ -68,7 +68,7 @@ const Highlights = () => {
                         <section className={clsx("flexRow", styles.highlightsCardOrder)}>
                             <button className={styles.highlightsCardOrderButton}>Order a delivery</button>
                             <figure className={styles.highlightsCardOrderIcon}>
-                                <img src={scooter} alt="Order delivery" />
+                                <img src={deliveryBike} alt="Order delivery" />
                             </figure>
                         </section>
                     </section>

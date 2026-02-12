@@ -22,9 +22,98 @@ ul {
 }
 
 a {
+    display: inline-block;
     font-family: Karla, sans-serif;
     font-weight: bold;
+    height: inherit;
+    position: relative;
     text-decoration: none;
+}
+
+a:link {
+  color: #333;
+}
+
+a:visited {
+  color: #FBDABB;
+}
+
+a:active {
+  color: #FBDABB;
+}
+
+li:has(a:focus-visible):after {
+  background: #495E57;
+  width: 80%;
+}
+
+/* .linkHoverEffect {
+  align-items: center;
+  color: #ede7f1;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  gap: 60px;
+  justify-content: center;
+  width: 100%;
+} */
+
+li {
+  cursor: pointer;
+}
+
+li a {
+  padding-bottom: 5%;
+}
+
+li:hover a {
+  color: #EE9972;
+}
+
+li:hover:not(.has-form) > a {
+  transition: color .3s ease 0s;
+}
+
+li.currentLink a {
+    color: #333;
+}
+
+li > a:focus-visible {
+    background-color: #495E57;
+    border-radius: 3px;
+    color: #FFF;
+    outline: thin solid #FFF;
+    padding: 0 3px !important;
+}
+
+li.currentLink a:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 3px;
+  margin: auto;
+  transition: width .5s ease, background-color .5s ease;
+  width: 0px;
+}
+
+li:after {
+  background: transparent;
+  content: '';
+  display: block;
+  height: 3px;
+  margin: 5px auto auto;
+  transition: width .5s ease, background-color .5s ease;
+  width: 0px;
+}
+
+li.currentLink:after {
+  background: #495E57;
+  width: 80%;
+}
+
+li:hover:after {
+  background: #495E57;
+  width: 80%;
 }
 
 h1 {
@@ -75,6 +164,19 @@ button {
     font-weight: bold;
     height: 40px;
     width: 200px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #EE9972;
+}
+
+button:visited {
+  background-color: #FBDABB;
+}
+
+button:active {
+  background-color: #FBDABB;
 }
 
 .flexRow {

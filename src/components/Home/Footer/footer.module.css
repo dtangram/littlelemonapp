@@ -2,6 +2,10 @@
     flex-direction: column;
 }
 
+.sectionList, .sectionList li {
+    width: fit-content;
+}
+
 .sectionList li, .sectionList li a {
     color: #495E57;
     font-size: 16pt;
@@ -37,6 +41,14 @@
 .sectionList li {
     font-family: Karla, sans-serif;
     font-weight: bold;
+}
+
+.sectionList li:after {
+    margin: unset;
+}
+
+.sectionList li a:focus-visible {
+    color: #FFF;
 }
 
 @media (min-width: 1095px) {

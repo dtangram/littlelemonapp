@@ -1,28 +1,28 @@
 import { Routes, Route } from 'react-router-dom';
-import Nav from './components/Nav/Nav';
-import Header from './components/Header/Header';
-import Highlights from './components/Highlights/Highlights';
-import Testimonials from './components/Testimonials/Testimonials';
-import About from './components/About/About';
-import Footer from './components/Footer/Footer';
+import Nav from './components/Home/Nav/Nav';
+import Main from './components/Home/Main/Main';
+import AboutPage from './components/AboutPage/AboutPage';
+// import Menu from './components/Menu';
+// import Reservations from './components/Reservation';
+// import OrderOnline from './components/OrderOnline';
+// import Login from './components/Login';
+import Footer from './components/Home/Footer/Footer';
 import './App.css';
 
 const App = () => {
   return (
-    <main>
+    <>
       <Nav />
       <Routes>
-        <Route path="/" element={
-          <>
-            <Header />
-            <Highlights />
-            <Testimonials />
-            <About />
-            <Footer />
-          </>
-        } />
+        <Route path="/" element={<Main />} />
+        <Route path="/about" element={<AboutPage />} />
+        {/* <Route path="/menu" element={<h1>Menu Page</h1>} />
+        <Route path="/reservations" element={<h1>Reservations Page</h1>} />
+        <Route path="/orderOnline" element={<h1>Order Online Page</h1>} />
+        <Route path="/login" element={<h1>Login Page</h1>} /> */}
       </Routes>
-    </main>
+      <Footer />
+    </>
   );
 }
 

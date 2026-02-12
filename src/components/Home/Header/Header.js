@@ -1,4 +1,4 @@
-import restaurantfood from '../../assets/restaurantfood.jpg';
+import restaurantfood from '../../../assets/restaurantfood.jpg';
 import clsx from 'clsx';
 import styles from './header.module.css';
 

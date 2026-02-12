@@ -1,4 +1,4 @@
-import llFooterLogo from "../../assets/llFooterLogo.png";
+import llFooterLogo from "../../../assets/llFooterLogo.png";
 import clsx from "clsx";
 import styles from "./footer.module.css";
 

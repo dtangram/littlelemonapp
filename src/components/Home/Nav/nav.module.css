@@ -16,7 +16,6 @@
     flex-direction: column;
     gap: clamp(8px, 2vw, 40px);
     margin-top: 10px;
-    padding: 20px;
     position: absolute;
     right: 0;
     top: 100%;
@@ -38,15 +37,10 @@
 }
 
 .navLinks li a {
-    color: #000;
     display: block;
     font-size: clamp(11pt, 1.5vw, 16pt);
     padding: 12px;
     white-space: nowrap;
-}
-
-.navLinks li:hover a {
-    color: #FFF;
 }
 
 .navContainer figure {
@@ -95,7 +89,12 @@
         display: flex;
         flex-direction: row;
         position: relative;
+        width: auto;
         z-index: 0;
+    }
+
+    .navLinks li:hover {
+        background-color: transparent;
     }
 
     .navLinks li a {
