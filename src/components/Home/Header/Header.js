@@ -5,7 +5,7 @@ import styles from './header.module.css';
 
 const Header = () => {
     const handleReservationClick = () => {
-        redirectTo("/reservation");
+        redirectTo("/reservations");
     };
 
     return (

@@ -1,14 +1,14 @@
-import { currentParam } from '../../../utils/getCurrentParams.js';
+import { currentPathname } from '../../../utils/currentPathname.js';
 import marioandAdrianA from '../../../assets/marioandAdrianA.jpg';
 import marioandAdrianB from '../../../assets/marioandAdrianB.jpg';
 import clsx from "clsx";
 import styles from './about.module.css';
 
 const About = () => {
-    const isCurrentParam = currentParam === '/about';
+    const isCurrentParam = currentPathname === '/about';
 
     return (
-        <section className={clsx("container", "flexRow", styles.aboutSection)}>
+        <main className={clsx("container", "flexRow", styles.aboutSection)}>
             <section className={clsx("flexColumn", styles.aboutContent)}>
                 {isCurrentParam ? <h1>Little Lemon</h1> : <h2>Little Lemon</h2>}
                 {isCurrentParam ? <h2>Chicago</h2> : <span>Chicago</span>}
@@ -24,7 +24,7 @@ const About = () => {
                     <img src={marioandAdrianB} alt="Mario and Adrian again" />
                 </figure>
             </section>
-        </section>
+        </main>
     );
 }
 

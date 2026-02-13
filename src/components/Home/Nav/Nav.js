@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { currentParam } from '../../../utils/getCurrentParams.js';
+import { currentPathname } from '../../../utils/currentPathname.js';
 import logo from "../../../assets/logo.jpg";
 import hamburgerIcon from "../../../assets/hamburgerIcon.png";
 import clsx from 'clsx';
@@ -9,7 +9,7 @@ const Nav = () => {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
   const toggleMenu = () => setIsHamburgerMenuOpen(prev => !prev);
   const closeMenu = () => setIsHamburgerMenuOpen(false);
-  const getCurrentLinkClass = (path) => currentParam === path ? "currentLink" : "";
+  const getCurrentLinkClass = (path) => currentPathname === path ? "currentLink" : "";
 
   return (
     <nav className={clsx("container", styles.navContainer)}>
