@@ -5,6 +5,7 @@
 }
 
 .aboutContent {
+    gap: 16px;
     margin-bottom: 20px;
     text-align: center;
     width: 520px;

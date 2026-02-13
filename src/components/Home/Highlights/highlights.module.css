@@ -119,6 +119,10 @@
     margin-top: 0;
 }
 
+.highlightsCardOrderButton:hover {
+    color: #EE9972;
+}
+
 .highlightsCardOrderIcon {
     width: 30px;
 }

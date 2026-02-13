@@ -22,7 +22,7 @@ const Testimonials = () => {
                         <figure className={styles.profile}>
                             <img src={adam} alt="Adam Profile" />
                         </figure>
-                        <p>-Adam A.</p>
+                        <p>- Adam A.</p>
                     </section>
                     <p>
                         "The food at Little Lemon is absolutely amazing! The flavors are authentic and the presentation is beautiful. Highly recommend!"

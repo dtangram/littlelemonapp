@@ -1,0 +1,1 @@
+export const currentParam = window.location.pathname;

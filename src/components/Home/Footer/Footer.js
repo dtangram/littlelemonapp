@@ -28,8 +28,8 @@ const Footer = () => {
                     <h3 className={styles.sectionHeading}>Contact</h3>
                     <ul className={clsx("flexColumn", styles.sectionList)}>
                         <li>Address: 123 Main St, Chicago, IL</li>
-                        <li>Phone: (123) 456-7890</li>
-                        <li>Email: info@littlelemon.com</li>
+                        <li>Phone: <a href="tel:+1234567890">(123) 456-7890</a></li>
+                        <li>Email: <a href="mailto:info@littlelemon.com">info@littlelemon.com</a></li>
                     </ul>
                 </section>
                 <section className={styles.footerSection}>

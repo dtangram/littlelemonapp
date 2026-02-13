@@ -1,3 +1,7 @@
+.navContainer {
+    background-color: #FFF;
+}
+
 .navLinks, .navSection {
     justify-content: center;
 }

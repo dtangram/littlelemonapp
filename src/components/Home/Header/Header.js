@@ -1,8 +1,13 @@
+import { redirectTo } from '../../../utils/redirectTo';
 import restaurantfood from '../../../assets/restaurantfood.jpg';
 import clsx from 'clsx';
 import styles from './header.module.css';
 
 const Header = () => {
+    const handleReservationClick = () => {
+        redirectTo("/reservation");
+    };
+
     return (
         <header id="header" className={clsx("container", "flexColumn", styles.headerContainer)}>
             <section className={clsx("flexColumn", styles.headerSection)}>
@@ -12,7 +17,7 @@ const Header = () => {
                     <p>
                         We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                     </p>
-                    <button className={styles.reservationButton}>Reserve a Table</button>
+                    <button className={styles.reservationButton} onClick={handleReservationClick}>Reserve a Table</button>
                 </article>
                 <figure className={styles.headerImage}>
                     <img className="borderRadius" src={restaurantfood} alt="Delicious Mediterranean Dish" />

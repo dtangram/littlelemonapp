@@ -1,3 +1,14 @@
 .aboutPageContainer {
+    background-color: #495E57;
     justify-content: center;
+}
+
+.aboutPageContainer h2, .aboutPageContainer p {
+    color: #FFF;
+}
+
+.aboutPageContainer > .aboutSection .aboutContent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
