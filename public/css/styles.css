@@ -1,0 +1,161 @@
+h1, h2, h3, h4, ul, figure, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h4 {
+    font-family: 'Markazi Text', serif;
+}
+
+h2, li > a:focus-visible {
+    color: #FFF;
+}
+
+h3, p, fieldset section, label, input, select, button {
+    font-family: Karla, sans-serif;
+}
+
+h3, li.currentLink a, a:link, button {
+    color: #333;
+}
+
+h4, p, fieldset section, input, select {
+  color: #495E57;
+}
+
+a:visited, a:active {
+  color: #FBDABB;
+}
+
+li.currentLink a:after, li:after {
+  content: '';
+  display: block;
+  height: 3px;
+  transition: width .5s ease, background-color .5s ease;
+  width: 0px;
+}
+
+li.currentLink:after, li:hover:after {
+  background: #495E57;
+  width: 80%;
+}
+
+p, fieldset section {
+  line-height: 1.5;
+  font-size: clamp(12pt, 1.5vw, 16pt);
+  font-weight: normal;
+}
+
+button:visited, button:active {
+  background-color: #FBDABB;
+}
+
+.container {
+  padding: 30px 17%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  font-family: Karla, sans-serif;
+  font-weight: bold;
+  height: inherit;
+  position: relative;
+  text-decoration: none;
+}
+
+a:link {
+  transition: color 0.3s ease-in-out;
+}
+
+li:has(a:focus-visible):after {
+  background: #495E57;
+  width: 80%;
+}
+
+li {
+  cursor: pointer;
+}
+
+li a {
+  padding-bottom: 5%;
+}
+
+li:hover a {
+  color: #EE9972;
+}
+
+li:hover:not(.has-form) > a {
+  transition: color .3s ease 0s;
+}
+
+li > a:focus-visible {
+  background-color: #495E57;
+  border-radius: 3px;
+  outline: thin solid #FFF;
+  padding: 0 3px !important;
+}
+
+li.currentLink a:after {
+  background: #333;
+  margin: auto;
+}
+
+li:after {
+  background: transparent;
+  margin: 5px auto auto;
+}
+
+h1 {
+  color:#F4CE14;
+  font-size: clamp(34pt, 5vw, 64pt);
+  font-weight: 500;
+}
+
+h2 {
+  font-size: clamp(24pt, 5vw, 40pt);
+  font-weight: normal;
+}
+
+h3 {
+  font-size: clamp(14pt, 3vw, 18pt);
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+button {
+  background-color: #F4CE14;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: clamp(14pt, 1.5vw, 18pt);
+  font-weight: bold;
+  height: 40px;
+  width: 200px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #EE9972;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.borderRadius {
+  border-radius: 16px;
+}
