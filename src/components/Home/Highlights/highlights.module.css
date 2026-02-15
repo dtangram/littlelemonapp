@@ -1,0 +1,161 @@
+.highlightsSectionCards, .highlightsCardHeader, .highlightsCardContent, .highlightsContent, .highlightsCardOrder {
+    gap: 8px;
+}
+
+.highlightsContent, .highlightsSectionCards {
+    flex-direction: column;
+}
+
+.highlightsCardHeader h3, .highlightsCardHeader span {
+    font-size: clamp(14pt, 1.5vw, 16pt);
+    font-weight: bolder;
+}
+
+.highlightsContent, .highlightsSectionCards, .highlightsCardHeader {
+    justify-content: space-between;
+}
+
+.highlightsCardImage, .highlightsCardImage img, .highlightsCardOrderIcon img {
+    width: 100%;
+}
+
+.highlightsContent {
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.highlightsContent h2 {
+    font-size: clamp(34pt, 5vw, 64pt);
+    text-align: center;
+}
+
+.highlightsCardContent button {
+    font-size: clamp(12px, 1.5vw, 16px);
+}
+
+.borderRadiusTop {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.highlightsSectionCards{
+    gap: 0;
+}
+
+.highlightsSection h2 {
+    color: #495E57;
+}
+
+.highlightsSection {
+    padding-top: 60px;
+}
+
+.highlightsCardHeader {
+    align-items: center;
+    flex-direction: column;
+}
+
+.highlightsCardHeader h3 {
+    color: #000;
+}
+
+.highlightsCardHeader span {
+    color: #EE9972;
+    margin: 0;
+}
+
+.highlightsCard {
+    border: 1px solid #495E57;
+    box-shadow: none;
+    height: 500px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+.highlightsCard:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(1.01);
+}
+
+.highlightsCardImage {
+    height: 214px;
+    overflow: hidden;
+}
+
+.highlightsCardImage img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.highlightsCard:hover .highlightsCardImage img {
+    transform: scale(1.3);
+}
+
+.highlightsCardContent {
+    background-color: #EDEFEE;
+    height: inherit;
+    padding: 16px;
+}
+
+.highlightsCardContent p {
+    height: clamp(100px, 15vw, 160px);
+}
+
+.highlightsCardContent button {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    height: auto;
+    text-align: left;
+    width: auto;
+}
+
+.highlightsCardOrder {
+    align-items: center;
+    gap: 8px;
+    margin-top: 0;
+}
+
+.highlightsCardOrderButton:hover {
+    color: #EE9972;
+}
+
+.highlightsCardOrderIcon {
+    width: 30px;
+}
+
+@media (min-width: 938px) {
+    .highlightsContent, .highlightsSectionCards {
+        flex-direction: row;
+    }
+
+    .highlightsContent h2 {
+    text-align: left;
+}
+
+    .highlightsCard {
+        height: 545px;
+        margin-bottom: 0;
+        width: 32%;
+    }
+
+    .highlightsCardOrder {
+        align-items: center;
+        gap: 8px;
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 1046px) {
+    .highlightsCardHeader {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .highlightsCardContent {
+        gap:25px;
+    }
+}

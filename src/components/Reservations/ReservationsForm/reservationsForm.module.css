@@ -1,0 +1,72 @@
+.formWrapper, .counterWrapper .counter {
+  align-items: center;
+}
+
+.counterWrapper, form > button {
+  margin: 0 auto;
+}
+
+.formWrapper {
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.form {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  max-width: 420px;
+  padding: 2.5rem;
+  width: 100%;
+}
+
+.fieldset {
+  border: none;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 1.25rem;
+}
+
+.field {
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.counterWrapper .counter {
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.counterWrapper .counter button {
+  width: 60px;
+}
+
+.label {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.input {
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  outline: none;
+  padding: 0.65rem 0.85rem;
+  width: 100%;
+}
+
+.select {
+  appearance: auto;
+  cursor: pointer;
+}
+
+.inputError {
+  border-color: #c0392b;
+}
+
+.error {
+  color: #c0392b;
+}

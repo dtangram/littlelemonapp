@@ -1,0 +1,1 @@
+export const OCCASIONS = ['Birthday', 'Anniversary', 'Business', 'Casual'];

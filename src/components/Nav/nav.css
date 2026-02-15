@@ -1,5 +1,0 @@
-.navContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-auto-rows: minmax(150px, auto);
-}

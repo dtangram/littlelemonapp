@@ -1,0 +1,97 @@
+.aboutSection {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aboutContent {
+    gap: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 520px;
+}
+
+.aboutContent h2 {
+    color: #F4CE14;
+}
+
+.aboutContent span {
+    color: #495E57;
+    display: inline-block;
+    font-family: 'Markazi Text', serif;
+    font-size: clamp(18pt, 5vw, 30pt);
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.aboutContent p {
+    padding: 0 10%;
+}
+
+.aboutImageWrapper {
+    margin: 0 auto;
+}
+
+.aboutImage {
+    height: 376px;
+    overflow: hidden;
+    width: 258px;
+}
+
+.aboutImage:nth-child(1) {
+    margin: 0 0 20px;
+}
+
+.aboutImage:nth-child(2) {
+    margin: 0;
+    position: relative;
+    z-index: 0;
+}
+
+.aboutImage:nth-child(1) img {
+    margin-left: -93px;
+    transform: scaleX(-1);
+    width: 581px;
+}
+
+.aboutImage:nth-child(2) img {
+    margin-left: -297px;
+    margin-top: -36px;
+    width: 638px;
+}
+
+@media (min-width: 938px) {
+    .aboutSection {
+        align-items: flex-start;
+        flex-direction: row;
+    }
+
+    .aboutContent {
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    .aboutImageWrapper {
+        margin: unset;
+        position: relative;
+        width: 500px;
+    }
+
+    .aboutImage:nth-child(1) {
+        margin-top: 50px;
+    }
+
+    .aboutImage:nth-child(2) {
+        margin-left: 207px;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 1615px) {
+    .aboutContent p {
+        padding: 0;
+    }
+}
+
