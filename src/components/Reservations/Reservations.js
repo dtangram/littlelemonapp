@@ -1,14 +1,18 @@
-import Counter from './Counter/Counter';
+import ReservationsForm from './ReservationsForm/ReservationsForm';
+import clsx from 'clsx';
+import styles from './reservations.module.css';
 
-const Reservation = () => {
+const Reservations = () => {
     return (
-        <main className="container">
-            <h1>Reservations</h1>
+        <main className={clsx("container", styles.reservationContainer)}>
             <section>
-                <Counter />
+                <h1>Reservations</h1>
+                <section>
+                    <ReservationsForm />
+                </section>
             </section>
         </main>
     );
 }
 
-export default Reservation;
+export default Reservations;
