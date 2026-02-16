@@ -1,7 +1,7 @@
 import { useReducer } from 'react';
-import availableTimesReducer from '../../reducers/availableTimesReducer';
-import { initializeTimes } from '../../consts/initializetimes';
-import { UPDATE_DATE } from '../../consts/actionTypes';
+import availableTimesReducer from '../../store/bookingForm/availableTimesReducer';
+import { initializeTimes } from '../../store/bookingForm/initializetimes';
+import { UPDATE_DATE } from '../../store/actionTypes';
 import BookingForm from './BookingForm/BookingForm';
 import clsx from 'clsx';
 import styles from './reservations.module.css';

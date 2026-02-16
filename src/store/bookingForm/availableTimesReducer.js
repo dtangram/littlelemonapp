@@ -1,5 +1,5 @@
-import { initializeTimes } from '../consts/initializetimes';
-import { UPDATE_DATE } from '../consts/actionTypes';
+import { initializeTimes } from './initializetimes';
+import { UPDATE_DATE } from '../actionTypes';
 
 const availableTimesReducer = (state, action) => {
   switch (action.type) {
