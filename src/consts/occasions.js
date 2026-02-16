@@ -1,1 +1,1 @@
-export const OCCASIONS = ['Birthday', 'Anniversary', 'Business', 'Casual'];
+export const OCCASIONS = ['Anniversary', 'Birthday', 'Business', 'Casual'];

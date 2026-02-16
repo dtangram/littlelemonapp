@@ -1,13 +1,16 @@
 import { useState } from 'react';
+import useCounter from './useCounter';
 import { formatPhoneNumber, phoneRegex } from '../utils/formatPhoneNumber';
 
-const useReservationsForm = () => {
+const useBookingForm = ({ onDateChange } = {}) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [occasion, setOccasion] = useState('');
   const [errors, setErrors] = useState({});
+
+  const { count, increment, decrementHandler, reset } = useCounter();
 
   const clearError = (field) => {
     if (errors[field]) setErrors(prev => ({ ...prev, [field]: '' }));
@@ -24,8 +27,10 @@ const useReservationsForm = () => {
   };
 
   const handleDateChange = (e) => {
-    setDate(e.target.value);
+    const selected = e.target.value;
+    setDate(selected);
     clearError('date');
+    if (onDateChange) onDateChange(selected);
   };
 
   const handleTimeChange = (e) => {
@@ -38,6 +43,16 @@ const useReservationsForm = () => {
     clearError('occasion');
   };
 
+  const handleIncrement = () => {
+    increment();
+    clearError('guestCount');
+  };
+
+  const handleReset = () => {
+    reset();
+    clearError('guestCount');
+  };
+
   const validate = () => {
     const newErrors = {};
     if (name.trim().length < 3) newErrors.name = 'Name must be at least 3 characters.';
@@ -45,6 +60,7 @@ const useReservationsForm = () => {
     if (!date) newErrors.date = 'Please select a date.';
     if (!time) newErrors.time = 'Please select a time.';
     if (!occasion) newErrors.occasion = 'Please select an occasion.';
+    if (count < 1) newErrors.guestCount = 'Please add at least 1 guest.';
     return newErrors;
   };
 
@@ -55,7 +71,7 @@ const useReservationsForm = () => {
       setErrors(newErrors);
       return;
     }
-    alert(`Submitted!\nName: ${name}\nPhone: ${phone}\nDate: ${date}\nTime: ${time}\nOccasion: ${occasion}`);
+    alert(`Submitted!\nName: ${name}\nPhone: ${phone}\nDate: ${date}\nTime: ${time}\nOccasion: ${occasion}\nGuests: ${count}`);
   };
 
   return {
@@ -65,6 +81,10 @@ const useReservationsForm = () => {
     time,
     occasion,
     errors,
+    count,
+    handleIncrement,
+    decrementHandler,
+    handleReset,
     handleNameChange,
     handlePhoneChange,
     handleDateChange,
@@ -74,4 +94,4 @@ const useReservationsForm = () => {
   };
 };
 
-export default useReservationsForm;
+export default useBookingForm;
