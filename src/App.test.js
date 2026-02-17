@@ -3,6 +3,19 @@ import { MemoryRouter } from 'react-router-dom';
 import Reservations from './components/Reservations/Reservations';
 import userEvent from '@testing-library/user-event';
 
+const mockNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockNavigate,
+}));
+
+beforeEach(() => {
+  window.fetchAPI = jest.fn(() => ['17:00', '18:00', '19:00']);
+  window.submitAPI = jest.fn(() => true);
+  mockNavigate.mockClear();
+});
+
 const renderReservations = () =>
   render(
     <MemoryRouter>
@@ -52,7 +65,7 @@ test('Renders the label for the Occasion input', () => {
   expect(occasionLabel).toBeInTheDocument();
 });
 
-test('Submits the form with valid inputs', async () => {
+test('Submits the form with valid inputs', () => {
   renderReservations();
 
   userEvent.type(screen.getByLabelText('Name'), 'Jane Smith');
@@ -62,12 +75,33 @@ test('Submits the form with valid inputs', async () => {
   userEvent.click(screen.getByText('+'));
   userEvent.selectOptions(screen.getByLabelText('Occasion'), 'Birthday');
 
-  // TODO: Mock the alert will be removed from the app when proper success page is created
-  const alertMock = jest.spyOn(window, 'alert').mockImplementation(() => {});
+  expect(window.fetchAPI).toHaveBeenLastCalledWith(new Date('2026-06-01'));
 
   userEvent.click(screen.getByText('Reserve a Table'));
 
-  expect(alertMock).toHaveBeenCalledTimes(1);
+  expect(window.submitAPI).toHaveBeenCalledTimes(1);
+  expect(mockNavigate).toHaveBeenCalledWith('/confirmation', expect.anything());
+});
 
-  alertMock.mockRestore();
+test('Shows validation errors for invalid inputs', () => {
+  renderReservations();
+
+  userEvent.type(screen.getByLabelText('Name'), 'Jo');
+  userEvent.type(screen.getByLabelText('Phone Number'), '123');
+  userEvent.type(screen.getByLabelText('Date'), '');
+  userEvent.selectOptions(screen.getByLabelText('Time'), '');
+  expect(screen.getByText('0')).toBeInTheDocument();
+  userEvent.selectOptions(screen.getByLabelText('Occasion'), '');
+
+  userEvent.click(screen.getByText('Reserve a Table'));
+
+  expect(screen.getByText('Name must be at least 3 characters.')).toBeInTheDocument();
+  expect(screen.getByText('Please enter a valid 10-digit phone number.')).toBeInTheDocument();
+  expect(screen.getByText('Please select a date.')).toBeInTheDocument();
+  expect(screen.getByText('Please select a time.')).toBeInTheDocument();
+  expect(screen.getByText('Please add at least 1 guest.')).toBeInTheDocument();
+  expect(screen.getByText('Please select an occasion.')).toBeInTheDocument();
+
+  expect(window.submitAPI).not.toHaveBeenCalled();
+  expect(mockNavigate).not.toHaveBeenCalled();
 });

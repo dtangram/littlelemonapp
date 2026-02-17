@@ -1,10 +1,10 @@
-import { initializeTimes } from './initializetimes';
+/* global fetchAPI */
 import { UPDATE_DATE } from '../actionTypes';
 
 const availableTimesReducer = (state, action) => {
   switch (action.type) {
     case UPDATE_DATE:
-      return initializeTimes();
+      return fetchAPI(new Date(action.date));
     default:
       return state;
   }

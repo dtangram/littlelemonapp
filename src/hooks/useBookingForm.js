@@ -1,4 +1,6 @@
+/* global submitAPI */
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useCounter from './useCounter';
 import { formatPhoneNumber, phoneRegex } from '../utils/formatPhoneNumber';
 
@@ -64,6 +66,8 @@ const useBookingForm = ({ onDateChange } = {}) => {
     return newErrors;
   };
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const newErrors = validate();
@@ -71,7 +75,15 @@ const useBookingForm = ({ onDateChange } = {}) => {
       setErrors(newErrors);
       return;
     }
-    alert(`Submitted!\nName: ${name}\nPhone: ${phone}\nDate: ${date}\nTime: ${time}\nOccasion: ${occasion}\nGuests: ${count}`);
+
+    const formData = { name, phone, date, time, occasion, guestCount: count };
+    const success = submitAPI(formData);
+
+    if (success) {
+      navigate('/confirmation', { state: { reservationData: formData } });
+    } else {
+      alert('Failed to submit reservation. Please try again.');
+    }
   };
 
   return {
