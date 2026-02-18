@@ -2,7 +2,7 @@ import { redirectTo } from '../../../utils/redirectTo';
 import greekSalad from '../../../assets/greek salad.jpg';
 import bruschetta from '../../../assets/bruschetta.jpg';
 import lemonDessert from '../../../assets/lemon dessert.jpg';
-import scooter from '../../../assets/scooter.png';
+import DeliveryBike from '../../../assets/svgs/deliveryBike';
 import clsx from 'clsx';
 import styles from './highlights.module.css';
 
@@ -15,7 +15,7 @@ const Highlights = () => {
         <section className={clsx("container", styles.highlightsSection)}>
             <section className={clsx("flexRow", styles.highlightsContent)}>
                 <h2>This week’s specials!</h2>
-                <button className={styles.reservationButton} onClick={handleOnlineMenuClick}>Online Menu</button>
+                <button className={styles.reservationButton} onClick={handleOnlineMenuClick} aria-label='View Menu'>Online Menu</button>
             </section>
             <section className={clsx("flexRow", styles.highlightsSectionCards)}>
                 <article className={clsx(styles.borderRadiusTop, styles.highlightsCard)}>
@@ -31,10 +31,12 @@ const Highlights = () => {
                             The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.
                         </p>
                         <section className={clsx("flexRow", styles.highlightsCardOrder)}>
-                            <button className={styles.highlightsCardOrderButton}>Order a delivery</button>
-                            <figure className={styles.highlightsCardOrderIcon}>
-                                <img src={scooter} alt="Order delivery" />
-                            </figure>
+                            <button className={clsx("flexRow", styles.highlightsCardOrderButton)} onClick={handleOnlineMenuClick} aria-label="View menu to place delivery order">
+                                <span>Order a delivery</span>
+                                <figure className={styles.highlightsCardOrderIcon}>
+                                    <DeliveryBike />
+                                </figure>
+                            </button>
                         </section>
                     </section>
                 </article>
@@ -51,10 +53,12 @@ const Highlights = () => {
                             Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.
                         </p>
                         <section className={clsx("flexRow", styles.highlightsCardOrder)}>
-                            <button className={styles.highlightsCardOrderButton}>Order a delivery</button>
-                            <figure className={styles.highlightsCardOrderIcon}>
-                                <img src={scooter} alt="Order delivery" />
-                            </figure>
+                            <button className={clsx("flexRow", styles.highlightsCardOrderButton)} onClick={handleOnlineMenuClick} aria-label="View menu to place delivery order">
+                                <span>Order a delivery</span>
+                                <figure className={styles.highlightsCardOrderIcon}>
+                                    <DeliveryBike />
+                                </figure>
+                            </button>
                         </section>
                     </section>
                 </article>
@@ -71,10 +75,12 @@ const Highlights = () => {
                             This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.
                         </p>
                         <section className={clsx("flexRow", styles.highlightsCardOrder)}>
-                            <button className={styles.highlightsCardOrderButton}>Order a delivery</button>
-                            <figure className={styles.highlightsCardOrderIcon}>
-                                <img src={scooter} alt="Order delivery" />
-                            </figure>
+                            <button className={clsx("flexRow", styles.highlightsCardOrderButton)} onClick={handleOnlineMenuClick} aria-label="View menu to place delivery order">
+                                <span>Order a delivery</span>
+                                <figure className={styles.highlightsCardOrderIcon}>
+                                    <DeliveryBike />
+                                </figure>
+                            </button>
                         </section>
                     </section>
                 </article>

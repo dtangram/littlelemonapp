@@ -44,7 +44,6 @@
 
 .label {
   letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .input {
@@ -61,6 +60,10 @@
 .select {
   appearance: auto;
   cursor: pointer;
+}
+
+form > button {
+  width: 255px;
 }
 
 .inputError {

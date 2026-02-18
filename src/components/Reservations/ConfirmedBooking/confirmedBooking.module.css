@@ -1,0 +1,23 @@
+.confirmationContainer {
+    height: 50vh;
+}
+
+.confirmationContainer .confirmationSection {
+    align-items: center;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.confirmationSection h1 {
+    color: #495E57;
+    text-align: center;
+}
+
+.confirmationSection svg {
+    height: 100px;
+    width: 100px;
+}
+
+.confirmationSection p {
+    text-align: center;
+}

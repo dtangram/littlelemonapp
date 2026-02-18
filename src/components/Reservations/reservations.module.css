@@ -5,3 +5,12 @@
 .reservationContainer h1 {
     text-align: center;
 }
+
+.reservationContainer > section {
+    align-items: center;
+}
+
+.reservationContainer > section > section {
+    min-width: 300px;
+    width: 501px;
+}
