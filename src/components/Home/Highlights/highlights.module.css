@@ -6,13 +6,17 @@
     flex-direction: column;
 }
 
+.highlightsContent, .highlightsSectionCards, .highlightsCardHeader {
+    justify-content: space-between;
+}
+
+.highlightsContent, .highlightsCardHeader, .highlightsCardOrder, .highlightsCardOrderButton {
+    align-items: center;
+}
+
 .highlightsCardHeader h3, .highlightsCardHeader span {
     font-size: clamp(14pt, 1.5vw, 16pt);
     font-weight: bolder;
-}
-
-.highlightsContent, .highlightsSectionCards, .highlightsCardHeader {
-    justify-content: space-between;
 }
 
 .highlightsCardImage, .highlightsCardImage img, .highlightsCardOrderIcon img {
@@ -20,7 +24,6 @@
 }
 
 .highlightsContent {
-    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -51,7 +54,6 @@
 }
 
 .highlightsCardHeader {
-    align-items: center;
     flex-direction: column;
 }
 
@@ -114,9 +116,13 @@
 }
 
 .highlightsCardOrder {
-    align-items: center;
     gap: 8px;
     margin-top: 0;
+}
+
+.highlightsCardOrderButton {
+    color:#333;
+    transition: color 0.3s ease-in-out;
 }
 
 .highlightsCardOrderButton:hover {
