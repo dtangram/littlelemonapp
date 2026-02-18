@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { currentPathname } from '../../../utils/currentPathname.js';
-import logo from "../../../assets/logo.jpg";
-import hamburgerIcon from "../../../assets/hamburgerIcon.png";
+import { currentPathname } from '../../utils/currentPathname';
+import logo from "../../assets/logo.jpg";
+import hamburgerIcon from "../../assets/hamburgerIcon.png";
 import clsx from 'clsx';
 import styles from './nav.module.css';
 

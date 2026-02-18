@@ -103,11 +103,11 @@ const BookingForm = ({ availableTimes, onDateChange }) => {
           <input type="hidden" id="guestCount" name="guestCount" value={count} readOnly />
           <section className={clsx('flexColumn', styles.counterWrapper)}>
             <section className={clsx('flexRow', styles.counter)}>
-              <button type="button" onClick={handleIncrement}>+</button>
+              <button type="button" onClick={handleIncrement} aria-label="Add guest">+</button>
               <span>{count}</span>
-              <button type="button" onClick={decrementHandler}>-</button>
+              <button type="button" onClick={decrementHandler} aria-label="Remove guest">-</button>
             </section>
-            <button type="button" onClick={handleReset}>Reset</button>
+            <button type="button" onClick={handleReset} aria-label="Reset guest count">Reset</button>
           </section>
           {errors.guestCount && (
             <span id="guestCount-error" role="alert" className={styles.error}>{errors.guestCount}</span>

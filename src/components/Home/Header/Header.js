@@ -17,7 +17,7 @@ const Header = () => {
                     <p>
                         We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                     </p>
-                    <button className={styles.reservationButton} onClick={handleReservationClick}>Reserve a Table</button>
+                    <button className={styles.reservationButton} onClick={handleReservationClick} aria-label='Make a Reservation'>Reserve a Table</button>
                 </article>
                 <figure className={styles.headerImage}>
                     <img className="borderRadius" src={restaurantfood} alt="Delicious Mediterranean Dish" />
